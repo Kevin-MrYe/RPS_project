@@ -44,6 +44,7 @@ In this milestone, I combine the code that used the webcam with the function tha
 To give user enough time to prepare action, I create a countdown to get ready for the game. I set a countdown variable name **TIMER**, TIMER will decrease by one every second. When the TIMER = 0, the webcam will capture the image and pass this image to RPS model to predict the user's action. In function **make_prediction()** the computer will choose a random action so that I can judge if the computer win or the user win through the game rules.
 
 2. Repeat until a player gets three victories
+
 To implement this part, I set two global variables named **usr_win_count** and **cp_win_count** to calculate the victory times for user and computer.
 If it is a tie, these two variable will not change. If the user win, usr_win_count will increase by 1, otherwise cp_win_count increases by 1. After every round, judge if user or computer already won three times.(usr_win_count = 3 or cp_win_count = 3)
 
