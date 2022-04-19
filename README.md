@@ -36,5 +36,16 @@ Define a list ["Rock","Paper","Scissors"]. Call the function **random.choice(lis
 
 Using if-else statements to choose a winner based on the classic rules of Rock-Paper-Scissors. If the action of user is the same as the computer's action, it is a tie and nothing will happen. If the action of user is one of Rock,Paper or Scissors, the computer will have two different actions. print the winner under different situation according to the game rules.
 
-**Note:** I want to repeat the game until a player get three victories, so I set two global variables named usr_win_count and cp_win_count to calculate the victory times for user and computer. After every round, judge if user or computer already won three times. 
+
+# Milestone 4
+In this milestone, I combine the code that used the webcam with the function that ask user for an input. Replace the manual input for the output of the RPS model. In addtion, I add three code part to improve the interaction of the game application. These parts are as follows:
+1. Count down 
+
+To give user enough time to prepare action, I create a countdown to get ready for the game. I set a countdown variable name **TIMER**, TIMER will decrease by one every second. When the TIMER = 0, the webcam will capture the image and pass this image to RPS model to predict the user's action. In function **make_prediction()** the computer will choose a random action so that I can judge if the computer win or the user win through the game rules.
+
+2. Repeat until a player gets three victories
+To implement this part, I set two global variables named **usr_win_count** and **cp_win_count** to calculate the victory times for user and computer.
+If it is a tie, these two variable will not change. If the user win, usr_win_count will increase by 1, otherwise cp_win_count increases by 1. After every round, judge if user or computer already won three times.(usr_win_count = 3 or cp_win_count = 3)
+
+3. Press c to continue
 
