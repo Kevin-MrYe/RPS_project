@@ -49,4 +49,16 @@ To implement this part, I set two global variables named **usr_win_count** and *
 If it is a tie, these two variable will not change. If the user win, usr_win_count will increase by 1, otherwise cp_win_count increases by 1. After every round, judge if user or computer already won three times.(usr_win_count = 3 or cp_win_count = 3)
 
 3. Press c to continue
+To print the message in the webcam display, I use **cv2.putText()** to add the text "Press c to continue". In order to react when pressing 'c',I call the **cv2.waitkey()** function. **waitkey()** function of Python OpenCV allows users to display a window for given milliseconds or until any key is pressed. So I use the following code to detect keypress.
+
+```python
+if cv2.waitKey(1) & 0xFF == ord('c'):
+    usr_win_count = 0
+    cp_win_count = 0
+
+```
+
+**waitKey()** returns a 32 Bit integer value (might be dependent on the platform). The **0xFF** in this scenario is representing binary 11111111 a 8 bit binary, since we only require 8 bits to represent a character. This is the reason why doing a AND operation between waitKey() to 0xFF.
+
+**Note:** **waitKey(0)** will pause the screen because it will wait infinitely for keyPress on the keyboard and will not refresh the frame(cap.read()) when using the webcam. However, **waitKey(1)** will wait for keyPress for just 1 millisecond and it will continue to refresh and read frame from webcam using cap.read().
 
