@@ -4,9 +4,9 @@
 The rules are very simple and probably you remember them from your childhood:
 
 * If you choose the same action, it is a tie.
-*  you choose Rock, you will win against Scissors but lose against Paper.
-* f you choose Scissors, you will win against Paper but lose against Rock.
-* f you choose Paper, you will win against Rock but lose against Scissors.
+* If you choose Rock, you will win against Scissors but lose against Paper.
+* If you choose Scissors, you will win against Paper but lose against Rock.
+* If you choose Paper, you will win against Rock but lose against Scissors.
 
 If you are ready to start, just press key "s" to start, then there will be a five seconds countdown. The game ends when somebody gets 3 wins. If you want to play again, just press key “c” after a game is finished.
 
