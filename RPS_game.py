@@ -67,9 +67,9 @@ while True:
             break
 
     TIMER = int(5)
-    
-   
-            
+
+
+
 # After the loop release the cap object
 cap.release()
 # Destroy all the windows
