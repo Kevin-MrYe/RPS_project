@@ -1,9 +1,20 @@
 # RPS_project
+“Rock paper scissors” is a simple and interesting game. Many of us used to play it in a school to resolve disputes or just to spend some time. But how to play it with computer using gesture?
+
+The rules are very simple and probably you remember them from your childhood:
+
+* If you choose the same action, it is a tie.
+* If you choose Rock, you will win against Scissors but lose against Paper.
+* If you choose Scissors, you will win against Paper but lose against Rock.
+* If you choose Paper, you will win against Rock but lose against Scissors.
+
+If you are ready to start, just press key "s" to start, then there will be a five seconds countdown. The game ends when somebody gets 3 wins. If you want to play again, just press key “c” after a game is finished.
+
 
 # Milestone 1
 In this milestone, I ues the **Teachable Machine** to create machine learning models for Rock, Paper, Scissors. [Teachable Machine](https://teachablemachine.withgoogle.com/) is a web-based tool which can be used to create machine learning models for images,sounds and poses.
 
-<img src ="https://github.com/Kevin-MrYe/RPS_project/blob/master/images/Teachable.png" width = '700px'>
+<img src ="https://github.com/Kevin-MrYe/RPS_project/blob/main/images/Teachable.png" width = '700px'>
 Just simpily click the Webcam icon and record gestures of Rock, Paper, Scissors. The "Nothing" class represents the lack of option in the image. After training, download the model from the "Tensorflow" tab in Teachable-Machine.
 
 # Milestone 2
