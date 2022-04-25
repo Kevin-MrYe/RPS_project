@@ -10,7 +10,7 @@ cap = cv2.VideoCapture(0) ##Open the first camera for video capturing.
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32) 
 ## 4D array, image size and RGB values
  
-TIMER = int(5)   #countdown
+TIMER = 5  #countdown
 cp_win_count = 0  # victories of computer
 usr_win_count = 0 # victories of user
 
@@ -51,7 +51,7 @@ while True:
     # Press q to close the window
     if cv2.waitKey(1) & 0xFF == ord('q'): 
         break
-    TIMER = int(5)
+    TIMER = 5
 
 # After the loop release the cap object
 cap.release()
