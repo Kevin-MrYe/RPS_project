@@ -34,7 +34,7 @@ def play_RPS(index_usr,usr_win_count,cp_win_count):
         print("You lose !!!")
     print()
     ## decide who is winner
-    if usr_win_count == 3 or cp_win_count == 3:
+    if usr_win_count == 3 or cp_win_count == 3:  
         if usr_win_count > cp_win_count:    
             print("You are the winner !!!")
         else:
@@ -51,21 +51,6 @@ def make_predication(frame,data,model):
     normalized_image = (image_np.astype(np.float32) / 127.0) - 1 # Normalize the image [0,255] to [0,1]
     data[0] = normalized_image
     prediction = model.predict(data)
-    # list_prediction = list(prediction[0])
-    #use list.index() to find the maximun
-
-    # if prediction[0][0] > 0.5:
-    #     usr_index = 0
-    # elif prediction[0][1] > 0.5:
-    #     usr_index = 1
-    # elif prediction[0][2] > 0.5:
-    #     usr_index = 2
-    # else:
-    #     usr_index = 3
-    # print("Rock:",prediction[0][0])
-    # print("Paper:",prediction[0][1])
-    # print("Scissors:",prediction[0][2])
-    # print("Nothing:",prediction[0][3])
 
     list_prediction = list(prediction[0])
     usr_index = list_prediction.index(max(list_prediction))
@@ -81,10 +66,10 @@ def imshow_with_text(cap,text,text_positon,fontsize,thickness,usr_win_count,cp_w
                     thickness,cv2.LINE_AA)
     cv2.putText(frame,"usr:"+str(usr_win_count),
                     (50,20),font,
-                    0.8,(0,255,255),
+                    0.8,(0,0,0),
                     2,cv2.LINE_4)
     cv2.putText(frame,"computer:"+str(cp_win_count),
                     (450,20),font,
-                    0.8,(0,255,255),
+                    0.8,(0,0,0),
                     2,cv2.LINE_4)
     cv2.imshow('frame', frame)
